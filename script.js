@@ -1,34 +1,22 @@
-// let bulb = document.querySelector("#blub")
-// let on = document.querySelector("#on")
-// let off = document.querySelector("#off")
+// console.log(document.body.children)
 
+// let box = document.getElementsByClassName("box")
+// let box = document.getElementById("box2")//2nd used
+// let h1 = document.getElementsByTagName("h1")
+// let box = document.querySelector(".box") //1st used
 
-// on.addEventListener("click", function(){
-//   bulb.style.backgroundColor = "yellow"
-// })
-
-// off.addEventListener("click", function(){
-//   bulb.style.backgroundColor = "white"
-// })
+// css --> tailwindcss
+//babel 
 
 
 
-let bulb = document.querySelector("#blub")
-let on = document.querySelector("#on")
+let heading1 = document.querySelectorAll(".heading1")
 
-
-let flag = 0 //1
-
-on.addEventListener("click", ()=>{
-   if(flag === 0){
-    bulb.style.backgroundColor = "yellow"
-    on.innerHTML = "Off"
-    flag = 1
-   }else {
-    bulb.style.backgroundColor = "white"
-    on.innerHTML = "On"
-    flag = 0
-   }
+heading1.forEach(elem=>{
+    // elem.style.color = "blue"
 })
 
+
+// forEach --> kuch bhi nahi return krna undefined
+// map --> return new Array
 
