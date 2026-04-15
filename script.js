@@ -1,61 +1,63 @@
-// import btnClick from "./functions.js"
-//Event handling 
-
 /**
- * - event : event is something that happens in the browser like user clicking,  mouse moving 
- * eg
- * 1. mouse event - click , hover , double click , etc.
- * 2. keyboard event - keypress, keyup , keydown etc
- * 3. form event - input , submit , change etc
- * 4. window envet - scroll, resize etc
+ * Mouse events
+ * 1. click
+ * 2. dblclick
+ * 3. mousedown 
+ * 4. mouseup
+ * 5. mouseenter - mouseover
+ * 6. mouseleave - mouseout
+ * 7. mousemove
+ * 8. contextmenu
  * 
- * //monitorEvents(window)
+ * Keyboard events
+ * 1. keydown
+ * 2. keyup
+ * 3. keypress      keydown + keyup --> keypress
+ * 
+ * 
+ * form event
+ * 1. submit --> form submit
+ * 2.rest --> form ki value reset
+ * 3. focus
+ * 4. blur
+ * 5. input
+ * 6. change
+ * 
+ * 
+ * Touch events
+ * 1. touchstart : finger touches the screen
+ * 2. touchmove : finger moves on the screen
+ * 3. touchend : finger removed from the screen
+ * 4. touchcancel : finger removed from the screen'
+ * 
+ * 
+ * window events
+ * 1. load -> page and resources load 
+ * 2. DOMContentLoaded - > dom html achhe load ho jaaye
+ * 3. lazy loading on 
  */
 
-/**
- * 3 ways to handle events -
- * 1. inline method  --> on , small 
- * 2. property method --> on 
- * 3.listner method
- */
+//event object : all detail regarding to event
 
+// const abc = document.querySelector("#suresh")
 
-// function ram(){
-//     console.log("helo how are you")
-// }
-
-// const btn = document.querySelector("#btn")
-
-// btn.onclick = ()=>{
-//     console.log("btn is clicked in property method event")
-// }
-
-// btn.onclick = ()=>{
-//     console.log("btn is clicked twice")
-// }
-
-const btn = document.querySelector("#btn")
-
-// btn.addEventListener(event, function) //syntax - way of writing
-
-// btn.removeEventListener("click", function(){
-//     console.log("btn click first time")
-// })
-// btn.removeEventListener("click", function(){
-//     console.log("btn click second  time")
+// abc.addEventListener("click", function(e){
+//     console.log(e.target)
 // })
 
+let form = document.querySelector("form")
+let reset = document.querySelector("#reset")
+let nameInput = document.querySelector("#nameInput")
+let submitBtn = document.querySelector("#submitBtn")
 
- function btnClick(){
-    let p = document.createElement("p")
-    p.innerHTML = "this is p created in js"
-    p.style.backgroundColor = "black"
-    p.style.color = "white"
-    p.style.padding = "20px"
-    let body = document.body
-    body.append(p)
-}
+// form.addEventListener("submit", function(){
+//     alert("form submit successfully")
+// })
 
+// submitBtn.addEventListener("touchcancel", function(e){
+//     alert("element touched remove")
+// })
 
-btn.addEventListener("click", btnClick)
-
+window.addEventListener("scroll", function(){
+    console.log("window scroll")
+})
